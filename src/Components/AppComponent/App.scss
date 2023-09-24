@@ -1,0 +1,37 @@
+@import "./variables.scss";
+@import "../../styles/responsive.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  font-family: "Roboto", sans-serif;
+  background-color: $main-bg;
+  color: $main-text;
+  min-height: 100vh;
+  min-width: 100wh;
+}
+
+.container {
+  display: flex;
+}
+.menuContainer {
+  width: 250px;
+  padding: 0.313rem 1.25rem;
+  border-right: 2px solid $soft-bg;
+
+  @include lg {
+    width: max-content;
+  }
+}
+.contentContainer {
+  width: 100%;
+  padding: 0.313rem 1.25rem;
+}

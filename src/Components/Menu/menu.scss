@@ -1,0 +1,39 @@
+@import "../../Components/AppComponent/variables.scss";
+@import "../../styles/responsive.scss";
+.Menu {
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+
+    .title {
+      font-size: smaller;
+      font-weight: 300;
+      color: $soft-text;
+      text-transform: uppercase;
+      @include lg{
+        display: none;
+      }
+    }
+    .linkItem {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.25rem;
+
+      &:hover {
+        background-color: $soft-bg;
+        border-radius: 0.25rem;
+      }
+      img {
+      }
+      .item-title {
+        font-size: medium;
+        @include lg{
+          display: none;
+        }
+      }
+    }
+  }
+}

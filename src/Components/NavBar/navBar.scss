@@ -1,0 +1,59 @@
+@import "../../styles/responsive.scss";
+@import "../../Components/AppComponent/variables.scss";
+
+.NavBar {
+  display: flex;
+  width: 100%;
+  padding: 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 1rem;
+    img {
+      width:6rem;
+      
+    }
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    .link{
+      @include sm{
+        display: none;
+      }
+    }
+    .notification {
+      position: relative;
+      span {
+        display: flex;
+        background-color: red;
+        color: white;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 50%;
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+        align-items: center;
+        justify-content: center;
+        font-size: large;
+      }
+    }
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      img {
+        width: 1.625rem;
+        height: 1.625rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../Components/AppComponent/variables.scss";
+@import "../../styles/responsive.scss";
+
+.Deals {
+  h1 {
+    margin-bottom: 1rem;
+    @include sm{
+      font-size: 20px;
+    }
+  }
+  .list {
+    .listItem {
+      margin-bottom: 1.65rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .deal {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        img {
+          width: 2.5rem;
+          height: 2.5rem;
+          object-fit: cover;
+          border-radius: 50%;
+          @include sm{
+            width: 1rem;
+          height: 1rem;
+          }
+        }
+        .dealText {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+          span:nth-child(1) {
+            font-size: 1rem;
+            font-weight: 500;
+          }
+          span:nth-child(2) {
+            font-size: 0.9rem;
+            font-weight: 300;
+          }
+        }
+      }
+      .amount {
+        font-size: 0.9rem;
+        font-weight: 400;
+        @include sm{
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+}

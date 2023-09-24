@@ -1,0 +1,109 @@
+@import "../../Components/AppComponent/variables.scss";
+@import "../../styles/responsive.scss";
+
+.Single {
+  display: flex;
+
+  @include lg{
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .view {
+    flex: 1;
+    .info {
+      .topInfo {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        img {
+            width: 4.5rem;
+            height: 4.5rem;
+            border-radius: 25%;
+            object-fit: cover;
+        }
+        h1 {
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+        button {
+            cursor: pointer;
+            padding: 0.25rem;
+            background-color: rgb(202, 67, 67);
+            color: rgb(250, 248, 248);
+        }
+      }
+      .details {
+        font-size: large;
+        .item {
+            margin: 1.75rem 0rem;
+          .itemTitle {
+            font-weight: 600;
+            margin-right: 0.75rem;
+            text-transform: capitalize;
+          }
+          .itemValue {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    hr{
+        width: 90%;
+        height: 0;
+        border: 1px solid grey;
+        margin: 2rem 0;
+        @include md{
+          display: none;
+        }
+    }
+    .chart {
+        margin-top: 2rem;
+        width: 80%;
+        height: 20rem;
+        @include md{
+          display: none;
+        }
+    }
+  }
+  .activitis {
+    flex: 1;
+    h2 {
+        margin-bottom: 2rem;
+    }
+    ul {
+      li {
+        list-style-type: none;
+        position: relative;
+        width: 0.01rem;
+        padding-top: 1rem;
+        background-color: pink;
+
+        &::after{
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: pink;
+            transform: translateX(-50%);
+        }
+        div {
+            min-width: 30rem;
+            padding: 1.1rem;
+            background-color: #f45b6810;
+            @include md{
+              min-width: 15rem;
+            }
+          p {
+            margin-bottom: 5px;
+          }
+          time {
+            font-size: small;
+          }
+        }
+      }
+    }
+  }
+}
